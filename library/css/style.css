@@ -1,0 +1,45 @@
+/* line 1, ../scss/style.scss */
+body {
+  background: #000000;
+  font-family: ubuntu;
+}
+
+/* line 6, ../scss/style.scss */
+.content {
+  display: none;
+  color: #00cd00;
+}
+/* line 10, ../scss/style.scss */
+.content.show {
+  display: block;
+}
+
+/* line 15, ../scss/style.scss */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 22, ../scss/style.scss */
+.overlay .pixelBlock {
+  background: #000000;
+  float: left;
+  position: relative;
+}
+/* line 27, ../scss/style.scss */
+.overlay .pixelBlock.show {
+  background: transparent;
+}
+/* line 31, ../scss/style.scss */
+.overlay .pixelBlock.show.current:after {
+  content: '';
+  display: block;
+  width: 10px;
+  background: #e5e5e5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}

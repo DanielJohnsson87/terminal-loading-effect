@@ -1,0 +1,45 @@
+body {
+	background: #000000;
+	font-family: ubuntu;
+}
+
+.content {
+	display: none;
+	color:#00cd00;
+
+	&.show {
+		display: block;
+	}
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom:0;
+	left:0;
+	right: 0;
+
+	.pixelBlock {
+		background: #000000;
+		float:left;
+		position: relative;
+
+		&.show {
+			background: transparent;
+
+			&.current {
+				&:after {
+					content: '';
+					display: block;
+					width: 10px;
+					background: #e5e5e5;
+					position: absolute;
+					right: 0;
+					top: 0;
+					bottom: 0;
+
+				}
+			}
+		}
+	}
+}
